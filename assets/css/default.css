@@ -1,0 +1,15 @@
+.art-slide-carousel{
+    position: relative; margin:0 auto; border: 1px solid red; overflow: hidden;
+    z-index: 32;
+}
+.art-slide-carousel .item {
+    position:relative; display:inline-block; overflow:hidden; margin-left: 5px;
+}
+.art-slide-carousel .item span{position:absolute;
+    bottom:0; left:0; padding:10px; width:100%; color:#fff; background: rgba(0, 0, 0, 0.7); }
+.art-slide-carousel .item span a{ color:#000; text-decoration: none; text-shadow:1px 1px 0 #fff; font-size:1.2em; }
+.art-slide-carousel .item span a:hover{
+    color: #fff; text-decoration: none; text-shadow:1px 1px 0 #000; font-size:1.2em; }
+
+.hidden{ display: none; }
+

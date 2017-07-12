@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.1" type="module" client="site" method="upgrade" >
+    <name>3D article slider</name>
+    <creationDate>15 - 7 - 2012</creationDate>
+    <author>jeprodev</author>
+    <authorEmail>develop@jeprodev.net</authorEmail>
+    <authorUrl>jeprodev.net</authorUrl>
+    <version>1.0.2</version>
+    <description>MOD_3D_ART_SLIDER_XML_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_art_slider" >mod_art_slider.php</filename>
+        <filename module="mod_art_slider" >mod_art_slider.xml</filename>
+        <filename module="mod_art_slider" >helper.php</filename>
+        <filename module="mod_art_slider" >index.html</filename>
+        <folder>tmpl</folder>
+        <folder>languages</folder>
+    </files>
+
+    <languages folder="languages" >
+        <language tag="en-GB" >languages/en-GB.mod_art_slider.ini</language>
+        <language tag="en-GB" >languages/en-GB.mod_art_slider.sys.ini</language>
+        <language tag="fr-FR" >languages/fr-FR.mod_art_slider.ini</language>
+        <language tag="fr-FR" >languages/fr-FR.mod_art_slider.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params" >
+            <fieldset name="BASIC" >
+                <field name="jeprodev_art_slider_layout" type="filelist" directory="modules/mod_art_slider/tmpl" filter=".php" default="default.php" label="MOD_3D_ART_SLIDER_LAYOUT_LABEL" description="MOD_3D_ART_SLIDER_LAYOUT_DESCRIPTION" />
+                <field name="jeprodev_art_slider_wrapper_height" type="text" default="380" label="MOD_3D_ART_SLIDER_WRAPPER_HEIGHT_LABEL" description="MOD_3D_ART_SLIDER_WRAPPER_HEIGHT_DESCRIPTION" />
+                <field name="jeprodev_art_slider_wrapper_width" type="text" default="810" label="MOD_3D_ART_SLIDER_WRAPPER_WIDTH_LABEL" description="MOD_3D_ART_SLIDER_WRAPPER_WIDTH_DESCRIPTION" />
+                <field name="jeprodev_art_slider_image_height" type="text" default="300" label="MOD_3D_ART_SLIDER_IMAGE_HEIGHT_LABEL" description="MOD_3D_ART_SLIDER_IMAGE_HEIGHT_DESCRIPTION" />
+                <field name="jeprodev_art_slider_image_width" type="text" default="400" label="MOD_3D_ART_SLIDER_IMAGE_WIDTH_LABEL" description="MOD_3D_ART_SLIDER_IMAGE_WIDTH_DESCRIPTION" />
+                <field name="jeprodev_art_slider_articles_ids" type="text" default="" label="MOD_3D_ART_SLIDER_ARTICLES_IDS_LABEL" description="MOD_3D_ART_SLIDER_ARTICLES_IDS_DESCRIPTION" />
+                <field name="jeprodev_art_slider_active_class" type="text" default="selected" label="MOD_3D_ART_SLIDER_ACTIVE_CLASS_LABEL" description="MOD_3D_ART_SLIDER_ACTIVE_CLASS_DESCRIPTION" />
+                <field name="jeprodev_art_slider_container" type="text" default="slide" label="MOD_3D_ART_SLIDER_CONTAINER_LABEL" description="MOD_3D_ART_SLIDER_CONTAINER_DESCRIPTION" />
+                <field name="jeprodev_art_slide_selector" type="text" default="slide_item" label="MOD_3D_ART_SLIDER_SLIDE_SELECTOR_LABEL" description="MOD_3D_ART_SLIDER_SLIDE_SELECTOR_DESCRIPTION" />
+                <!--field name="jeprodev_art_slider" type="" default="" label="MOD_3D_ART_SLIDER__LABEL" description="MOD_3D_ART_SLIDER__DESCRIPTION" /-->
+            </fieldset>
+            <fieldset name="EFFECT" >
+                <field name="jeprodev_art_slider_scroll" type="text" default="1" label="MOD_3D_ART_SLIDER_SCROLL_LABEL" description="MOD_3D_ART_SLIDER_SCROLL_DESCRIPTION" />
+                <field name="jeprodev_art_slider_distance" type="text" default="1" label="MOD_3D_ART_SLIDER_DISTANCE_LABEL" description="MOD_3D_ART_SLIDER_DISTANCE_DESCRIPTION" />
+                <field name="jeprodev_art_slider_circular" type="radio" default="1" class="btn-group btn-group-yesno"
+                       label="MOD_3D_ART_SLIDER_CIRCULAR_LABEL" description="MOD_3D_ART_SLIDER_CIRCULAR_DESCRIPTION" >
+                    <option value="1" >JYES</option>
+                    <option value="0" >JNO</option>
+                </field>
+                <field name="jeprodev_art_slider_current" type="text" default="3" label="MOD_3D_ART_SLIDER_CURRENT_LABEL" description="MOD_3D_ART_SLIDER__DESCRIPTION" />
+                <field name="jeprodev_art_slider_animation" type="list" default="Rotate3D" label="MOD_3D_ART_SLIDER_ANIMATION_LABEL" description="MOD_3D_ART_SLIDER_ANIMATION_DESCRIPTION" >
+                    <option value="Rotate3D" >MOD_3D_ART_SLIDER_ROTATE_3D_LABEL</option>
+                </field>
+                <field name="jeprodev_art_slider_min" type="text" default=".1" label="MOD_3D_ART_SLIDER_MIN_LABEL" description="MOD_3D_ART_SLIDER__DESCRIPTION" />
+                <field name="jeprodev_art_slider_fx_duration" type="text" default="300" label="MOD_3D_ART_SLIDER_FX_DURATION_LABEL" description="MOD_3D_ART_SLIDER_FX_DURATION_DESCRIPTION" />
+                <field name="jeprodev_art_slider_y_radius" type="text" default="10" label="MOD_3D_ART_SLIDER_Y_RADIUS_LABEL" description="MOD_3D_ART_SLIDER__DESCRIPTION" />
+                <field name="jeprodev_art_slider_margin" type="text" default="25" label="MOD_3D_ART_SLIDER_MARGIN_LABEL" description="MOD_3D_ART_SLIDER_MARGIN_DESCRIPTION" />
+                <field name="jeprodev_art_slider_offset_angle" type="text" default="-195" label="MOD_3D_ART_SLIDER_OFFSET_ANGLE_LABEL" description="MOD_3D_ART_SLIDER_OFFSET_ANGLE_DESCRIPTION" />
+                <field name="jeprodev_art_slider_center_x_offset" type="text" default="-100" label="MOD_3D_ART_SLIDER_CENTER_X_OFFSET_LABEL" description="MOD_3D_ART_SLIDER_CENTER_X_OFFSET_DESCRIPTION" />
+                <field name="jeprodev_art_slider_center_y_offset" type="text" default="0" label="MOD_3D_ART_SLIDER_CENTER_Y_OFFSET_LABEL" description="MOD_3D_ART_SLIDER_CENTER_Y_OFFSET_DESCRIPTION" />
+                <field name="jeprodev_art_slider_interval" type="text" default="10" label="MOD_3D_ART_SLIDER_INTERVAL_LABEL" description="MOD_3D_ART_SLIDER_INTERVAL_DESCRIPTION" />
+                <field name="jeprodev_art_slider_delay" type="text" default="10" label="MOD_3D_ART_SLIDER_DELAY_LABEL" description="MOD_3D_ART_SLIDER_DELAY_DESCRIPTION" />
+                <field name="jeprodev_art_slider_auto_start" type="radio" default="1" class="btn-group btn-group-yesno"
+                       label="MOD_3D_ART_SLIDER_AUTO_START_LABEL" description="MOD_3D_ART_SLIDER_AUTO_START_DESCRIPTION" >
+                    <option value="1" >JYES</option>
+                    <option value="0" >JNO</option>
+                </field>
+            </fieldset>
+            <!--fieldset name="" ></fieldset>
+            <fieldset name="" ></fieldset -->
+        </fields>
+    </config>
+</extension>
